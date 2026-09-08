@@ -1,0 +1,551 @@
+{
+	"name": "Player",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
+			"eventType": "variable",
+			"name": "jogador_velocidadeX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "velocidade horizontal da moto do jogador",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 270931887252538
+		},
+		{
+			"eventType": "variable",
+			"name": "jogador_velocidadeY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Velocidade inicial da moto eixo y",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 979348202953798
+		},
+		{
+			"eventType": "variable",
+			"name": "jogador_tremidaX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 732523039522051
+		},
+		{
+			"eventType": "variable",
+			"name": "jogador_tremidaY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 635334767063143
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 420528252493623
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 498828881490754,
+					"parameters": {
+						"variable": "jogador_velocidadeX",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 318447176673512,
+					"parameters": {
+						"variable": "jogador_velocidadeY",
+						"value": "-2"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 283045812739770,
+					"parameters": {
+						"variable": "jogador_tremidaX",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 135432579330946,
+					"parameters": {
+						"variable": "jogador_velocidadeY",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 857308190339513
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movimento Horizontal",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 414576850005613,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 886486609800522,
+							"parameters": {
+								"variable": "jogador_velocidadeX",
+								"value": "-8"
+							}
+						}
+					],
+					"sid": 962740290634130
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 683251231716518,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 674734717618513,
+							"parameters": {
+								"variable": "jogador_velocidadeX",
+								"value": "6"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 843952827318663,
+							"parameters": {
+								"variable": "jogo_multiplicadorVelocidade",
+								"value": "lerp(jogo_multiplicadorVelocidade,8,0.8)"
+							}
+						}
+					],
+					"sid": 159599298606853
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 711351512815423,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 652699665123761,
+							"parameters": {
+								"variable": "jogador_velocidadeX",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 433335083934329
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 286726589858720,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 172953426575188,
+							"parameters": {
+								"variable": "jogador_velocidadeX",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 132873012142493,
+							"parameters": {
+								"variable": "jogo_multiplicadorVelocidade",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 863150714627324
+				}
+			],
+			"sid": 952434449689012
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movimento Vertical",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 938482579286139,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 760808450013309,
+							"parameters": {
+								"variable": "jogador_velocidadeY",
+								"value": "-8"
+							}
+						}
+					],
+					"sid": 472220904207651
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 425684521261850,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 936752552054163,
+							"parameters": {
+								"variable": "jogador_velocidadeY",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 478935587393671
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 852400338011221,
+							"parameters": {
+								"key": 40
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 194123325935285,
+							"parameters": {
+								"variable": "jogador_velocidadeY",
+								"value": "8"
+							}
+						}
+					],
+					"sid": 343973977983112
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 659751128254783,
+							"parameters": {
+								"key": 40
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 754679585035379,
+							"parameters": {
+								"variable": "jogador_velocidadeY",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 133551296686701
+				}
+			],
+			"sid": 426909639260694
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Atualizar Posição",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 747866743685907
+						}
+					],
+					"actions": [],
+					"sid": 686154376691049
+				}
+			],
+			"sid": 668175626109578
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Limites Tela",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 698123372991613
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "mainCaracter",
+							"sid": 231580245796779,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "mainCaracter",
+							"sid": 678344797218125,
+							"parameters": {
+								"x": "20"
+							}
+						}
+					],
+					"sid": 123116390348763
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 134429390024774
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "mainCaracter",
+							"sid": 289608980820791,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "980"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "mainCaracter",
+							"sid": 966601992354297,
+							"parameters": {
+								"x": "980"
+							}
+						}
+					],
+					"sid": 459357868055459
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 551540538806806
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "mainCaracter",
+							"sid": 543552644324801,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "400"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "mainCaracter",
+							"sid": 345355356763161,
+							"parameters": {
+								"y": "400"
+							}
+						}
+					],
+					"sid": 661747539211044
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 183463529694039
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "mainCaracter",
+							"sid": 176510922075475,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "590"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "mainCaracter",
+							"sid": 412102914176701,
+							"parameters": {
+								"y": "590"
+							}
+						}
+					],
+					"sid": 871671303615310
+				}
+			],
+			"sid": 129626932285922
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Vibração",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 134564585910491
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "mainCaracter",
+							"sid": 502785490181251,
+							"parameters": {
+								"y": "mainCaracter.Y + jogador_velocidadeY+ jogador_tremidaY"
+							}
+						}
+					],
+					"sid": 572278100537958
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 624865359523269
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 678163084075805,
+							"parameters": {
+								"variable": "jogador_tremidaX",
+								"value": "lerp(jogador_tremidaX, random(-2, 2) * jogo_multiplicadorVelocidade, 0.1)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 645639743844829,
+							"parameters": {
+								"variable": "jogador_tremidaY",
+								"value": "lerp(jogador_tremidaY, random(-2, 2) * jogo_multiplicadorVelocidade, 0.1)"
+							}
+						}
+					],
+					"sid": 232579787195895
+				}
+			],
+			"sid": 204427772377786
+		}
+	],
+	"sid": 860371283827254
+}

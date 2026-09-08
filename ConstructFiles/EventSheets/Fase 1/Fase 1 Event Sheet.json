@@ -1,0 +1,108 @@
+{
+	"name": "Fase 1 Event Sheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "fase1_Velocidade",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 835113975772312
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Player"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Parallax"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Obstacules"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 384243935898675
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 245932653509260,
+					"parameters": {
+						"variable": "jogo_vida",
+						"value": "3"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 410669546084724,
+					"parameters": {
+						"variable": "jogo_fase",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 632519284316406,
+					"parameters": {
+						"variable": "jogo_velocidadeBase",
+						"value": "4"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 332376439602877,
+					"parameters": {
+						"variable": "jogo_multiplicadorVelocidade",
+						"value": "fase1_Velocidade"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 306317462114771,
+					"parameters": {
+						"variable": "jogo_velocidadeParallaxBase",
+						"value": "12"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 731875629723471,
+					"parameters": {
+						"variable": "jogo_tempoDecorrido",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 763581541506537,
+					"parameters": {
+						"variable": "jogo_gameState",
+						"value": "\"playing\""
+					}
+				}
+			],
+			"sid": 944451038629850
+		}
+	],
+	"sid": 289059915662832
+}

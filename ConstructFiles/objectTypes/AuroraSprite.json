@@ -1,0 +1,52 @@
+{
+	"name": "AuroraSprite",
+	"plugin-id": "Sprite",
+	"sid": 314344216107643,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1280,
+						"height": 721,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5921616,
+						"collisionPoly": {
+							"points": [
+								0.0017301038062283738,
+								0.003067484662576687,
+								0.9982698961937716,
+								0.003067484662576687,
+								0.9982698961937716,
+								0.9969325153374233,
+								0.0017301038062283738,
+								0.9969325153374233
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 331998398426974,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

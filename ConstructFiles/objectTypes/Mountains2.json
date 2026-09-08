@@ -1,0 +1,56 @@
+{
+	"name": "Mountains2",
+	"plugin-id": "Sprite",
+	"sid": 783711948163360,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1280,
+						"height": 376,
+						"originX": 0.5,
+						"originY": 0.041176470588235294,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5679858,
+						"collisionPoly": {
+							"points": [
+								0.657439446366782,
+								0.0058823529411764705,
+								0.9982698961937716,
+								0.6941176470588235,
+								0.9982698961937716,
+								0.9941176470588236,
+								0.0017301038062283738,
+								0.9941176470588236,
+								0.0017301038062283738,
+								0.6941176470588235,
+								0.12110726643598616,
+								0.29411764705882354
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 729533792095785,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

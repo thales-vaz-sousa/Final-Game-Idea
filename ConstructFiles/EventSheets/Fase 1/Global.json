@@ -1,0 +1,76 @@
+{
+	"name": "Global",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "jogo_vida",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "Vida do personagem principal",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 694357160329363
+		},
+		{
+			"eventType": "variable",
+			"name": "jogo_fase",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Fase que está o jogador",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 785341524047371
+		},
+		{
+			"eventType": "variable",
+			"name": "jogo_velocidadeBase",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Velocidade base do jogo (obstáculos)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 464877799001783
+		},
+		{
+			"eventType": "variable",
+			"name": "jogo_multiplicadorVelocidade",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Multiplicador quando acelera",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 292923352972437
+		},
+		{
+			"eventType": "variable",
+			"name": "jogo_velocidadeParallaxBase",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 622244915965745
+		},
+		{
+			"eventType": "variable",
+			"name": "jogo_tempoDecorrido",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 673662207328807
+		},
+		{
+			"eventType": "variable",
+			"name": "jogo_gameState",
+			"type": "string",
+			"initialValue": "",
+			"comment": "Estado do jogo",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 257996311387333
+		}
+	],
+	"sid": 602518641607724
+}

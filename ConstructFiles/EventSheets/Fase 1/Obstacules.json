@@ -1,0 +1,177 @@
+{
+	"name": "Obstacules",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
+			"eventType": "variable",
+			"name": "obstaculo_velocidadeMin",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 685102763829690
+		},
+		{
+			"eventType": "variable",
+			"name": "obstaculo_velocidadeMax",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 298806046467257
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 542464347610089
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 919203441301808,
+					"parameters": {
+						"variable": "obstaculo_velocidadeMax",
+						"value": "18"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 583544904677901,
+					"parameters": {
+						"variable": "obstaculo_velocidadeMin",
+						"value": "15"
+					}
+				}
+			],
+			"sid": 683989168226118
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SPAWN",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 626646365058527,
+							"parameters": {
+								"interval-seconds": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 546908833924825,
+							"parameters": {
+								"object-to-create": "Sprite6",
+								"layer": "0",
+								"x": "1420",
+								"y": "464",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sprite6",
+							"sid": 710927987382435,
+							"parameters": {
+								"instance-variable": "Velocidade",
+								"value": "random(obstaculo_velocidadeMin,obstaculo_velocidadeMax)"
+							}
+						}
+					],
+					"sid": 947078955720613
+				}
+			],
+			"sid": 257237453099727
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MOVIMENTO",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 484392389500616
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Sprite6",
+							"sid": 755071677748811,
+							"parameters": {
+								"x": "Sprite6.X -(Sprite6.Velocidade * jogo_multiplicadorVelocidade)"
+							}
+						}
+					],
+					"sid": 302449592355640
+				}
+			],
+			"sid": 762559381458907
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "DESTRUIR",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 308711792950766
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "Sprite6",
+							"sid": 733143833182607,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "-100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Sprite6",
+							"sid": 839191603411224
+						}
+					],
+					"sid": 386508441137323
+				}
+			],
+			"sid": 172656416962181
+		}
+	],
+	"sid": 348815358697664
+}

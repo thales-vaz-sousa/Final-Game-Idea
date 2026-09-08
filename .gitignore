@@ -1,0 +1,29 @@
+# Construct 3
+*.c3p.bak
+*.c3addon
+Temp/
+.c3runtime/
+node_modules/
+
+#large files
+ConstructFiles/Assets/Inspiration/
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+
+Builds/*.exe
+Builds/*.dmg
+Builds/*.apk
+
+# Cache
+*.cache
+*.tmp

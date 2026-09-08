@@ -1,0 +1,336 @@
+{
+	"name": "Parallax",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
+			"eventType": "variable",
+			"name": "fundo_velocidadeCeu",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "velocidade horizontal da moto do jogador",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 411514179614915
+		},
+		{
+			"eventType": "variable",
+			"name": "fundo_velocidadeMontanha",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Velocidade inicial da moto eixo y",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 397897071913073
+		},
+		{
+			"eventType": "variable",
+			"name": "estrada_velocidadeLinha",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 469483647824797
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 272436854036133
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 289471790380998,
+					"parameters": {
+						"variable": "fundo_velocidadeCeu",
+						"value": "0.4"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 274688343323043,
+					"parameters": {
+						"variable": "fundo_velocidadeMontanha",
+						"value": "1.4"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 961513728200378,
+					"parameters": {
+						"variable": "estrada_velocidadeLinha",
+						"value": "4"
+					}
+				}
+			],
+			"sid": 282675657895219
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MOVER HORIZONTAL",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 743946346302991
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "AuroraSprite",
+							"sid": 442555355032568,
+							"parameters": {
+								"x": "AuroraSprite.X - (fundo_velocidadeCeu* jogo_multiplicadorVelocidade)"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "AuroraSprite2",
+							"sid": 531675275009232,
+							"parameters": {
+								"x": "AuroraSprite2.X - (fundo_velocidadeCeu* jogo_multiplicadorVelocidade)"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Mountains",
+							"sid": 116944435225981,
+							"parameters": {
+								"x": "Mountains.X - (fundo_velocidadeMontanha* jogo_multiplicadorVelocidade)"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Mountains2",
+							"sid": 851042436244812,
+							"parameters": {
+								"x": "Mountains2.X - (fundo_velocidadeMontanha * jogo_multiplicadorVelocidade)"
+							}
+						}
+					],
+					"sid": 502672912076354
+				}
+			],
+			"sid": 662341773061003
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "RESET FUNDO",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 930028059061826
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "AuroraSprite",
+							"sid": 854427627746373,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "-640"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "AuroraSprite",
+							"sid": 528154215374746,
+							"parameters": {
+								"x": "AuroraSprite2.X + 1280"
+							}
+						}
+					],
+					"sid": 712335371679645
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 166560072184506
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "AuroraSprite2",
+							"sid": 327415557518684,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "-640"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "AuroraSprite2",
+							"sid": 924419352754244,
+							"parameters": {
+								"x": "AuroraSprite.X + 1280"
+							}
+						}
+					],
+					"sid": 535098584799320
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 684315139431968
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "Mountains",
+							"sid": 245643019445114,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "-640"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Mountains",
+							"sid": 432231597536697,
+							"parameters": {
+								"x": "Mountains2.X + 1280"
+							}
+						}
+					],
+					"sid": 598195553595659
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 736741186359793
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "Mountains2",
+							"sid": 497651924730783,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "-640"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Mountains2",
+							"sid": 683037389401451,
+							"parameters": {
+								"x": "Mountains.X +1280"
+							}
+						}
+					],
+					"sid": 495416027382577
+				}
+			],
+			"sid": 926084811699939
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "LINHAS ESTRADA",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 552079720431411
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Sprite2",
+							"sid": 920093599062328,
+							"parameters": {
+								"x": "Sprite2.X - (estrada_velocidadeLinha * jogo_multiplicadorVelocidade)"
+							}
+						}
+					],
+					"sid": 175741102456515
+				}
+			],
+			"sid": 329079088907853
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "RESET LINHAS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 418740146006391
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "Sprite2",
+							"sid": 297568247647294,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "-20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Sprite2",
+							"sid": 673023021462373,
+							"parameters": {
+								"x": "1280"
+							}
+						}
+					],
+					"sid": 668525778541076
+				}
+			],
+			"sid": 320955804130902
+		}
+	],
+	"sid": 607185433684812
+}
