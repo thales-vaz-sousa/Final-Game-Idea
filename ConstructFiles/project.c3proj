@@ -27,7 +27,6 @@
 			"mainCaracter",
 			"Sprite",
 			"mainRoad",
-			"Sprite2",
 			"carroObstaculo1",
 			"Keyboard",
 			"Sprite3",
@@ -37,7 +36,10 @@
 			"AuroraSprite",
 			"Mountains",
 			"AuroraSprite2",
-			"Mountains2"
+			"Mountains2",
+			"roadborder",
+			"Sprite7",
+			"Sprite8"
 		],
 		"subfolders": []
 	},
@@ -50,20 +52,21 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Fase 1"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
-		"items": [],
+		"items": [
+			"Global"
+		],
 		"subfolders": [
 			{
 				"items": [
-					"Fase 1 Event Sheet",
-					"Global",
-					"Obstacules",
-					"Parallax",
-					"Player"
+					"Global - Fase 1",
+					"Obstaculos - Fase 1",
+					"Parallax - Fase 1",
+					"Player - Fase 1"
 				],
 				"subfolders": [],
 				"name": "Fase 1"

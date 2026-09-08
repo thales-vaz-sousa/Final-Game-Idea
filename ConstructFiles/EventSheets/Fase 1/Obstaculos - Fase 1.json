@@ -1,5 +1,5 @@
 {
-	"name": "Obstacules",
+	"name": "Obstaculos - Fase 1",
 	"events": [
 		{
 			"eventType": "include",
@@ -9,7 +9,7 @@
 			"eventType": "variable",
 			"name": "obstaculo_velocidadeMin",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "4",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -19,42 +19,11 @@
 			"eventType": "variable",
 			"name": "obstaculo_velocidadeMax",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "6",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 298806046467257
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 542464347610089
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 919203441301808,
-					"parameters": {
-						"variable": "obstaculo_velocidadeMax",
-						"value": "18"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 583544904677901,
-					"parameters": {
-						"variable": "obstaculo_velocidadeMin",
-						"value": "15"
-					}
-				}
-			],
-			"sid": 683989168226118
 		},
 		{
 			"eventType": "group",
@@ -69,9 +38,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 626646365058527,
+							"sid": 182551800816319,
 							"parameters": {
-								"interval-seconds": "3"
+								"interval-seconds": "2"
 							}
 						}
 					],
@@ -79,10 +48,10 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 546908833924825,
+							"sid": 695102396690751,
 							"parameters": {
 								"object-to-create": "Sprite6",
-								"layer": "0",
+								"layer": "\"Enviroment\"",
 								"x": "1420",
 								"y": "464",
 								"create-hierarchy": false,

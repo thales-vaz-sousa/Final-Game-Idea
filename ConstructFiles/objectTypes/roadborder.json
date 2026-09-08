@@ -1,7 +1,7 @@
 {
-	"name": "Sprite2",
+	"name": "roadborder",
 	"plugin-id": "Sprite",
-	"sid": 548673544591778,
+	"sid": 418199255637625,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,22 +12,22 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1920,
+						"height": 1080,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5619365,
+						"imageSpriteId": 5299727,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 458188476391278,
-				"name": "Animation 1",
+				"sid": 347160615874219,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

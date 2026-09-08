@@ -1,5 +1,5 @@
 {
-	"name": "Player",
+	"name": "Player - Fase 1",
 	"events": [
 		{
 			"eventType": "include",
@@ -19,7 +19,7 @@
 			"eventType": "variable",
 			"name": "jogador_velocidadeY",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "-2",
 			"comment": "Velocidade inicial da moto eixo y",
 			"isStatic": false,
 			"isConstant": false,
@@ -44,55 +44,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 635334767063143
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 420528252493623
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 498828881490754,
-					"parameters": {
-						"variable": "jogador_velocidadeX",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 318447176673512,
-					"parameters": {
-						"variable": "jogador_velocidadeY",
-						"value": "-2"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 283045812739770,
-					"parameters": {
-						"variable": "jogador_tremidaX",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 135432579330946,
-					"parameters": {
-						"variable": "jogador_velocidadeY",
-						"value": "0"
-					}
-				}
-			],
-			"sid": 857308190339513
 		},
 		{
 			"eventType": "group",
@@ -130,43 +81,9 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 683251231716518,
-							"parameters": {
-								"key": 39
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 674734717618513,
-							"parameters": {
-								"variable": "jogador_velocidadeX",
-								"value": "6"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 843952827318663,
-							"parameters": {
-								"variable": "jogo_multiplicadorVelocidade",
-								"value": "lerp(jogo_multiplicadorVelocidade,8,0.8)"
-							}
-						}
-					],
-					"sid": 159599298606853
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "on-key-released",
 							"objectClass": "Keyboard",
-							"sid": 711351512815423,
+							"sid": 679954399142464,
 							"parameters": {
 								"key": 37
 							}
@@ -176,22 +93,22 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 652699665123761,
+							"sid": 907448621195802,
 							"parameters": {
 								"variable": "jogador_velocidadeX",
 								"value": "0"
 							}
 						}
 					],
-					"sid": 433335083934329
+					"sid": 305915186047716
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-key-released",
+							"id": "key-is-down",
 							"objectClass": "Keyboard",
-							"sid": 286726589858720,
+							"sid": 251617228673358,
 							"parameters": {
 								"key": 39
 							}
@@ -201,7 +118,41 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 172953426575188,
+							"sid": 374697064988546,
+							"parameters": {
+								"variable": "jogador_velocidadeX",
+								"value": "6"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 120770330485901,
+							"parameters": {
+								"variable": "jogo_multiplicadorVelocidade",
+								"value": "lerp(jogo_multiplicadorVelocidade,8,0.8)"
+							}
+						}
+					],
+					"sid": 118502634033700
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 682049456975805,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 827571047098622,
 							"parameters": {
 								"variable": "jogador_velocidadeX",
 								"value": "0"
@@ -210,14 +161,14 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 132873012142493,
+							"sid": 778619330921374,
 							"parameters": {
 								"variable": "jogo_multiplicadorVelocidade",
-								"value": "1"
+								"value": "lerp(jogo_multiplicadorVelocidade, 4, 0.5)"
 							}
 						}
 					],
-					"sid": 863150714627324
+					"sid": 603258970500275
 				}
 			],
 			"sid": 952434449689012
@@ -245,10 +196,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 760808450013309,
+							"sid": 799423557238090,
 							"parameters": {
 								"variable": "jogador_velocidadeY",
-								"value": "-8"
+								"value": "-4"
 							}
 						}
 					],
@@ -295,10 +246,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 194123325935285,
+							"sid": 729805377355544,
 							"parameters": {
 								"variable": "jogador_velocidadeY",
-								"value": "8"
+								"value": "4"
 							}
 						}
 					],
@@ -348,7 +299,24 @@
 							"sid": 747866743685907
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "mainCaracter",
+							"sid": 282460007811135,
+							"parameters": {
+								"x": "mainCaracter.X + jogador_velocidadeX + jogador_tremidaX"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "mainCaracter",
+							"sid": 893007983027598,
+							"parameters": {
+								"y": "mainCaracter.Y + jogador_velocidadeY + jogador_tremidaY"
+							}
+						}
+					],
 					"sid": 686154376691049
 				}
 			],
@@ -525,19 +493,19 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 678163084075805,
+							"sid": 101734909821751,
 							"parameters": {
 								"variable": "jogador_tremidaX",
-								"value": "lerp(jogador_tremidaX, random(-2, 2) * jogo_multiplicadorVelocidade, 0.1)"
+								"value": "lerp(jogador_tremidaX, random(-0.1, 0.1) * jogo_multiplicadorVelocidade, 0.1)"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 645639743844829,
+							"sid": 885055805659461,
 							"parameters": {
 								"variable": "jogador_tremidaY",
-								"value": "lerp(jogador_tremidaY, random(-2, 2) * jogo_multiplicadorVelocidade, 0.1)"
+								"value": "lerp(jogador_tremidaY, random(-0.05, 0.05) * jogo_multiplicadorVelocidade, 0.1)"
 							}
 						}
 					],

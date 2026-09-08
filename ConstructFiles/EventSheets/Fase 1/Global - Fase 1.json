@@ -1,5 +1,5 @@
 {
-	"name": "Fase 1 Event Sheet",
+	"name": "Global - Fase 1",
 	"events": [
 		{
 			"eventType": "variable",
@@ -17,15 +17,15 @@
 		},
 		{
 			"eventType": "include",
-			"includeSheet": "Player"
+			"includeSheet": "Player - Fase 1"
 		},
 		{
 			"eventType": "include",
-			"includeSheet": "Parallax"
+			"includeSheet": "Parallax - Fase 1"
 		},
 		{
 			"eventType": "include",
-			"includeSheet": "Obstacules"
+			"includeSheet": "Obstaculos - Fase 1"
 		},
 		{
 			"eventType": "block",
@@ -67,19 +67,19 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 332376439602877,
+					"sid": 931696544282734,
 					"parameters": {
 						"variable": "jogo_multiplicadorVelocidade",
-						"value": "fase1_Velocidade"
+						"value": "4"
 					}
 				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 306317462114771,
+					"sid": 948283349387162,
 					"parameters": {
 						"variable": "jogo_velocidadeParallaxBase",
-						"value": "12"
+						"value": "15"
 					}
 				},
 				{
